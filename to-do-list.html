@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="to-do-list.css">
+</head>
+<body>
+
+    <div class="header">
+        <div style="flex: 1;"></div>
+        <div class="trademark-div"></div>
+        <p class="trademark">
+            <strong>TO DO LIST</strong>
+        </p>
+        <div style="flex: 1;"></div>
+    </div>
+
+
+    <div class="text-submit-done">
+        <div style="flex: .5;"></div>
+
+        <div class="text-button-div" style="flex: 1;">
+
+            <div class="text-box-div">
+
+                <input class="text-box" type="text" placeholder="Enter a to do" id="userInputToDo">
+
+            </div>
+
+            <div class="done-button-div">
+
+                <button class="done-button" name="submit" onclick="addTask()">
+                    Add to task
+                </button>
+
+            </div>
+
+        </div>
+        <div style="flex: .5;"></div>
+    </div>
+
+    <div class="to-do-list-container">
+        <div>
+            <p class="subtext">
+                ALL TODOS
+            </p>
+        </div>
+        
+        <div  class="displayToDoList" id="displayToDoList">
+                
+        </div>
+    </div>
+
+    <input type="checkbox">
+    <script src="to-do-list.js"></script>
+</body>
+</html>
