@@ -7,7 +7,8 @@ ul {
 body {
     margin: 0;
     background-image: url(background.png.png);
-    background-repeat: repeat-y;
+    background-size: fill;
+    background-repeat: repeat;
 }
 
 .header {
@@ -85,13 +86,17 @@ body {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    z-index: 0;
 }
+
 .subtext {
     background-color: none;
     margin-left: 10px;
     color: rgb(126, 126, 126);
     font-size: 14px;
     display: inline;
+    position: relative;
 }
 .subtext-for-task {
     background-color: none;
@@ -99,6 +104,7 @@ body {
     color: rgb(126, 126, 126);
     font-size: 15px;
     display: inline;
+
 }
 .displayToDoList {
     padding-left: 10px;
@@ -108,9 +114,16 @@ body {
     flex-direction: column;
     align-content: space-between;
     align-content: center;
+
 }
 .delete-button {
     margin-left: 10px;
+    transition: background-color .2s, color .2s;
+}
+.delete-button:hover {
+    background-color: red;
+    color: white;
+    z-index: 1;
 }
 
 input[type="checkbox"] {
@@ -160,6 +173,11 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: margin-bottom .2s, margin-top .2s;
+}
+.task-display:hover {
+    margin-bottom: 10px;
+    margin-top: -10px;
 }
 .delete-button-div {
     align-items: right;
